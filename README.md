@@ -1,0 +1,2 @@
+Hi! This is my first GitHub repository and first time connecting R-Studio to Github. In this project, I do a brief data analysis of the Kaggle datasets on the Eurovision Song Contest. For more on the contest itself, and to view the created plots/their descriptions, please see the esc_epa pdf in files. 
+> For suggestions on improvement (such as chart visibility, overlooked data, or code readability) please reach out to me via LinkedIn: https://www.linkedin.com/in/alice-mardanian/
