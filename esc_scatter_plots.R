@@ -26,13 +26,11 @@ song_2019$final_televote_points <- as.numeric(as.character(song_2019$final_telev
 
 
 #plot each 
-attach(mtcars)
-par(mfrow = c(2,2))
 
 p1 <- ggplot(song_2015, aes(x = energy, y = final_televote_points)) + 
   geom_point()+
-  scale_x_continuous(breaks = seq(10, 90, by = 10)) +
-  scale_y_continuous(breaks = seq(0,300, by = 100))+
+  scale_x_continuous(breaks = seq(10, 90, by = 10),limits = c(10, 90)) +
+  scale_y_continuous(breaks = seq(0,300, by = 100), limits = c(0,400))+
   labs(
     y = "final televote points",
     title = "Points by energy level (2015)"
@@ -40,8 +38,8 @@ p1 <- ggplot(song_2015, aes(x = energy, y = final_televote_points)) +
 
 p2 <- ggplot(song_2016, aes(x = energy, y = final_televote_points)) + 
   geom_point()+
-  scale_x_continuous(breaks = seq(10, 90, by = 10)) +
-  scale_y_continuous(breaks = seq(0,300, by = 100))+
+  scale_x_continuous(breaks = seq(10, 90, by = 10),limits = c(10, 90)) +
+  scale_y_continuous(breaks = seq(0,300, by = 100), limits = c(0,400))+
   labs(
     y = "final televote points",
     title = "Points by energy level (2016)"
@@ -49,8 +47,8 @@ p2 <- ggplot(song_2016, aes(x = energy, y = final_televote_points)) +
 
 p3 <- ggplot(song_2017, aes(x = energy, y = final_televote_points)) + 
   geom_point()+
-  scale_x_continuous(breaks = seq(10, 90, by = 10)) +
-  scale_y_continuous(breaks = seq(0,300, by = 100))+
+  scale_x_continuous(breaks = seq(10, 90, by = 10),limits = c(10, 90)) +
+  scale_y_continuous(breaks = seq(0,300, by = 100), limits = c(0,400))+
   labs(
     y = "final televote points",
     title = "Points by energy level (2017)"
@@ -58,8 +56,8 @@ p3 <- ggplot(song_2017, aes(x = energy, y = final_televote_points)) +
 
 p4 <- ggplot(song_2018, aes(x = energy, y = final_televote_points)) + 
   geom_point()+
-  scale_x_continuous(breaks = seq(10, 90, by = 10)) +
-  scale_y_continuous(breaks = seq(0,300, by = 100))+
+  scale_x_continuous(breaks = seq(10, 90, by = 10),limits = c(10, 90)) +
+  scale_y_continuous(breaks = seq(0,300, by = 100), limits = c(0,400))+
   labs(
     y = "final televote points",
     title = "Points by energy level (2018)"
@@ -68,5 +66,6 @@ p4 <- ggplot(song_2018, aes(x = energy, y = final_televote_points)) +
 
 #visualize together using patchwork
 ((p1|p2)/(p3|p4))
+
 
 
